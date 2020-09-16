@@ -33,3 +33,11 @@ models:
         tests:
           - accepted_values:
               values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
+
+  - name: orders
+    description: validate orderid is not null
+    columns:
+      - name: order_id
+        description: Primary key
+        tests:
+          - not_null              
